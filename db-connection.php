@@ -1,15 +1,16 @@
 <?php
-
 $servername = "trmsserver1.mysql.database.azure.com";
 $username = "nandana";
 $password = "March14032003";
 $databasename = "trms";
-$port = 3306;  // This is the default MySQL port
+$port = 3306;
 
-$conn = mysqli_connect($servername, $username, $password, $databasename, $port);
-
-if(mysqli_connect_errno()){
-    echo "Failed to connect to MySQL: ".mysqli_connect_errno();
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$databasename;port=$port", $username, $password);
+    // Set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully!";
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
 }
-
 ?>
