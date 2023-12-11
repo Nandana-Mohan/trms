@@ -64,3 +64,5 @@ jobs:
           slot-name: 'Production'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DDB3A89E27964D30A35FB0B6D595C289 }}
+      - name: 'Check GitHub Actions IP Addresses'
+        run: echo "GitHub Actions IP Addresses:$(curl -s https://api.github.com/meta | jq -r .actions[])"
