@@ -6,7 +6,7 @@ $databasename = "trms";
 $port = 3306;
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$databasename;port=$port", $username, $password);
+    $conn = new PDO("mysql:host=$servername;port=$port;dbname=$databasename;charset=utf8", $username, $password);
     // Set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully!";
