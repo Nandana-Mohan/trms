@@ -63,4 +63,4 @@ jobs:
           app-name: 'trmsweb'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1A5B629BB1834A599E368E8CA1006972 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_617F8A230E5F46DBAFC173DEB628BFC7 }}
