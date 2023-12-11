@@ -1,8 +1,8 @@
 <?php
 
-$servername = "nandana";
-$username = "root";
-$password = "";
+$servername = "trmsql.mysql.database.azure.com";
+$username = "nandana";
+$password = "March14032003";
 $databasename = "trms";
 
 $conn = mysqli_connect($servername, $username, $password, $databasename);
