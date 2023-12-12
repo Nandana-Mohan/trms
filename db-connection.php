@@ -1,5 +1,5 @@
 <?php
-$servername = "trmsserver1.mysql.database.azure.com";
+$servername = "127.0.0.1";
 $username = "nandana";
 $password = "March14032003";
 $databasename = "trms";
