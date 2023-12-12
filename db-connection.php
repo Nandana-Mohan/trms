@@ -5,12 +5,17 @@ $password = "March14032003";
 $databasename = "trms";
 $port = 3306;
 
-try {
-    $conn = new PDO("mysql:host=$servername;port=$port;dbname=$databasename;charset=utf8", $username, $password);
-    // Set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully!";
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
+// Create connection
+$conn = new mysqli($servername, $username, $password, $databasename, $port);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
+echo "Connected successfully!";
+
+// Perform database operations or close the connection as needed
+
+$conn->close();
 ?>
